@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "DelOrigin Extensions",
+  "description": "delete header origin field and add userAgent",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions":[
+    "storage","declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+],
+"declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": false,
+      "path": "rules_1.json"
+    }]
+  }
+}

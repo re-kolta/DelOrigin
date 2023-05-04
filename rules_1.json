@@ -1,0 +1,23 @@
+[{
+    "id" : 1,
+    "priority": 1,
+    "action" : { 
+        "type" : "modifyHeaders",
+        "requestHeaders":[
+            {
+                "header":"Origin",
+                "operation":"remove"
+            },
+            {
+                "header":"User-Agent",
+                "operation":"set",
+                "value":"pan.baidu.com"
+            }
+        ]    
+        },
+    "condition" : {
+      "urlFilter" : "spring", 
+      "resourceTypes" : ["main_frame","script","xmlhttprequest"]
+    }
+}
+]
